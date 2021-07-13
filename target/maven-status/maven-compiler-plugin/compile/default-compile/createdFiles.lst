@@ -1,5 +1,5 @@
-org/onosproject/test/action/AppComponent.class
 org/onosproject/test/action/StateFirewallStatus.class
+org/onosproject/test/action/AppComponent.class
 org/onosproject/test/action/AppComponent$DLSocketServer.class
 org/onosproject/test/action/Protocol.class
 org/onosproject/test/action/AppComponent$DLPredictTraceProcessor.class

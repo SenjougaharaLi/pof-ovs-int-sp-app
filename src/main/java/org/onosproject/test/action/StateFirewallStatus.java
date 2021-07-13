@@ -38,18 +38,19 @@ public enum StateFirewallStatus {
 
      */
 
-    SFW_STATUS_DEFAULT_ERROR		(0),
+    TCP_STATUS_DEFAULT_ERROR		(0),   //lty
     SFW_STATUS_REQUESTER_NONE		(1),
-    SFW_STATUS_RESPONSER_NONE		(2),
+    TCP_STATUS_SERVER_LISTEN		(2),    //lty
 
     // first SYN from c--->s
     SFW_STATUS_REQUESTER_SYN_SENT	(3),
-    SFW_STATUS_RESPONSER_WAITSYN	(4),
+    TCP_STATUS_SERVER_SYNRCVD	(4),  //lty
     // syn+ack from s ---->c
+
     SFW_STATUS_RESPONSER_SYNACK_SENT (6),
     SFW_STATUS_REQUESTER_ESTABLISH	 (7),
     // ack from c ---> s
-    SFW_STATUS_RESPONSER_ESTABLISH	(8),
+    TCP_STATUS_SERVER_ESTABLISH	(8),  //lty
 
     // fin from c ---> s
     SFW_STATUS_REQUESTER_FIN_SENT	(9),
