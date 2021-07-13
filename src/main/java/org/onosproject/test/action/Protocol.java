@@ -21,9 +21,9 @@ public class Protocol {
     /**
      * TCP field ids.
      */
-    final static short TCP_FLAG = 48;
-    final static short TCP_FLAG_OFF = 47*8;
-    final static short TCP_FLAG_LEN = 8;
+//    final static short TCP_FLAG = 48;
+//    final static short TCP_FLAG_OFF = 47*8;
+//    final static short TCP_FLAG_LEN = 8;
 
     /**
      * const

@@ -551,65 +551,65 @@ public class AppComponent {
         tcp_flag.setOffset(Protocol.IPV4_SIP_OFF);
         tcp_flag.setLength(Protocol.IPV4_SIP_LEN);
 
-        OFMatch20 tcp_flag_at = new OFMatch20();
-        tcp_flag_at.setFieldId(Protocol.TCP_FLAG);
-        tcp_flag_at.setOffset(Protocol.TCP_FLAG_OFF);
-        tcp_flag_at.setLength(Protocol.TCP_FLAG_LEN);
+//        OFMatch20 tcp_flag_at = new OFMatch20();
+//        tcp_flag_at.setFieldId(Protocol.TCP_FLAG);
+//        tcp_flag_at.setOffset(Protocol.TCP_FLAG_OFF);
+//        tcp_flag_at.setLength(Protocol.TCP_FLAG_LEN);
 
         st_tmp.setmatch(tcp_flag);
-        at_tmp.setmatch(tcp_flag_at);
+        at_tmp.setmatch(tcp_flag);
 
-        OFMatch20 tcp_flag_1 = new OFMatch20();
-        tcp_flag_1.setFieldId(Protocol.TCP_FLAG);
-        tcp_flag_1.setOffset(Protocol.TCP_FLAG_OFF);
-        tcp_flag_1.setLength(Protocol.TCP_FLAG_LEN); //lty
+//        OFMatch20 tcp_flag_1 = new OFMatch20();
+//        tcp_flag_1.setFieldId(Protocol.TCP_FLAG);
+//        tcp_flag_1.setOffset(Protocol.TCP_FLAG_OFF);
+//        tcp_flag_1.setLength(Protocol.TCP_FLAG_LEN); //lty
 
-        OFMatchX tcp_flag_x = new OFMatchX(tcp_flag, PofCriterion.hexStringToBytes("0000000000000001"), PofCriterion.hexStringToBytes("0000000000000001"));
-        OFMatchX tcp_flag_x2 = new OFMatchX(tcp_flag_1, PofCriterion.hexStringToBytes("0000000000000002"), PofCriterion.hexStringToBytes("00000000000000ff"));
-        OFMatchX tcp_flag_x3 = new OFMatchX(tcp_flag_1, PofCriterion.hexStringToBytes("0000000000000010"), PofCriterion.hexStringToBytes("00000000000000ff")); //lty
+//        OFMatchX tcp_flag_x = new OFMatchX(tcp_flag, PofCriterion.hexStringToBytes("0000000000000001"), PofCriterion.hexStringToBytes("0000000000000001"));
+//        OFMatchX tcp_flag_x2 = new OFMatchX(tcp_flag_1, PofCriterion.hexStringToBytes("0000000000000002"), PofCriterion.hexStringToBytes("00000000000000ff"));
+//        OFMatchX tcp_flag_x3 = new OFMatchX(tcp_flag_1, PofCriterion.hexStringToBytes("0000000000000010"), PofCriterion.hexStringToBytes("00000000000000ff")); //lty
 
-        byte[] test = PofCriterion.hexStringToBytes("0000000000000001");
-        log.info("++++++ pjq test {}", test.toString());
-        log.info("++++++ pjq test {}", test);
-        log.info("++++++pjq tcp_flg_x to string {}", tcp_flag_x.toString());
-        log.info("++++++pjq tcp_flg_x to bytestring {}", tcp_flag_x.toBytesString());
-        log.info("++++++lty tcp_flg_x", tcp_flag_x);
-
-        OFMatchX tcp_flag_x1 = new OFMatchX();
-        OFMatchX tcp_flag_x4 = new OFMatchX();
-        OFMatchX tcp_flag_x5 = new OFMatchX();
-        OFMatchX tcp_flag_x6 = new OFMatchX();
-        OFMatchX tcp_flag_x7 = new OFMatchX();
-        try {
-             tcp_flag_x1 = tcp_flag_x.clone();
-             tcp_flag_x4 = tcp_flag_x.clone();
-             tcp_flag_x5 = tcp_flag_x.clone();
-             tcp_flag_x6 = tcp_flag_x.clone();
-             tcp_flag_x7 = tcp_flag_x.clone();
-        } catch (CloneNotSupportedException e) {
-
-        }
-
-        log.info("++++++pjq tcp_flg_x1 to string {}", tcp_flag_x1.toString());
-        log.info("++++++pjq tcp_flg_x1 to bytestring {}", tcp_flag_x1.toBytesString());
-        log.info("++++++lty tcp_flg_x2 to string {}", tcp_flag_x2.toString());
-        log.info("++++++lty tcp_flg_x2 to bytestring {}", tcp_flag_x2.toBytesString());
-        log.info("++++++lty tcp_flg_x3 to string {}", tcp_flag_x3.toString());
-        log.info("++++++lty tcp_flg_x3 to bytestring {}", tcp_flag_x3.toBytesString());
+//        byte[] test = PofCriterion.hexStringToBytes("0000000000000001");
+//        log.info("++++++ pjq test {}", test.toString());
+//        log.info("++++++ pjq test {}", test);
+//        log.info("++++++pjq tcp_flg_x to string {}", tcp_flag_x.toString());
+//        log.info("++++++pjq tcp_flg_x to bytestring {}", tcp_flag_x.toBytesString());
+//        log.info("++++++lty tcp_flg_x", tcp_flag_x);
+//
+//        OFMatchX tcp_flag_x1 = new OFMatchX();
+//        OFMatchX tcp_flag_x4 = new OFMatchX();
+//        OFMatchX tcp_flag_x5 = new OFMatchX();
+//        OFMatchX tcp_flag_x6 = new OFMatchX();
+//        OFMatchX tcp_flag_x7 = new OFMatchX();
+//        try {
+//             tcp_flag_x1 = tcp_flag_x.clone();
+//             tcp_flag_x4 = tcp_flag_x.clone();
+//             tcp_flag_x5 = tcp_flag_x.clone();
+//             tcp_flag_x6 = tcp_flag_x.clone();
+//             tcp_flag_x7 = tcp_flag_x.clone();
+//        } catch (CloneNotSupportedException e) {
+//
+//        }
+//
+//        log.info("++++++pjq tcp_flg_x1 to string {}", tcp_flag_x1.toString());
+//        log.info("++++++pjq tcp_flg_x1 to bytestring {}", tcp_flag_x1.toBytesString());
+//        log.info("++++++lty tcp_flg_x2 to string {}", tcp_flag_x2.toString());
+//        log.info("++++++lty tcp_flg_x2 to bytestring {}", tcp_flag_x2.toBytesString());
+//        log.info("++++++lty tcp_flg_x3 to string {}", tcp_flag_x3.toString());
+//        log.info("++++++lty tcp_flg_x3 to bytestring {}", tcp_flag_x3.toBytesString());
 
         OFMatch20 tcp_flag_const = new OFMatch20();
         tcp_flag_const.setFieldId(Protocol.CONST);
 
-        OFMatch20 tcp_flag_const1 = new OFMatch20();
-        tcp_flag_const1.setFieldId((short)0xfff0); //lty
+        OFMatch20 INT_flag_const1 = new OFMatch20();
+        INT_flag_const1.setFieldId((short)0xfff0); //lty
         OFMatch20 INT_flag_hoplatency = new OFMatch20();
         INT_flag_hoplatency.setFieldId((short)0xfff1); //lty
 
         STTDATA []sttdat = {
-                new STTDATA(tcp_flag_x2, new OFMatchX(tcp_flag_const1, PofCriterion.hexStringToBytes("0000000000000002"), PofCriterion.hexStringToBytes("00000000000000ff")), SPEventOp.OPRATOR_ISEQUAL,
-                        StateFirewallStatus.TCP_STATUS_SERVER_LISTEN.getValue(), StateFirewallStatus.TCP_STATUS_SERVER_SYNRCVD.getValue()),
-                new STTDATA(tcp_flag_x3, new OFMatchX(tcp_flag_const1, PofCriterion.hexStringToBytes("0000000000000010"), PofCriterion.hexStringToBytes("00000000000000ff")), SPEventOp.OPRATOR_ISEQUAL,
-                        StateFirewallStatus.TCP_STATUS_SERVER_SYNRCVD.getValue(), StateFirewallStatus.TCP_STATUS_SERVER_ESTABLISH.getValue())
+                new STTDATA(new OFMatchX(INT_flag_hoplatency, PofCriterion.hexStringToBytes("0000000000000002"), PofCriterion.hexStringToBytes("00000000000000ff")), new OFMatchX(INT_flag_const1, PofCriterion.hexStringToBytes("0000000000000002"), PofCriterion.hexStringToBytes("00000000000000ff")), SPEventOp.OPRATOR_EQUALGREATER,
+                        StateFirewallStatus.INT_STATUS_LOW_QOS.getValue(), StateFirewallStatus.INT_STATUS_HIGH_QOS.getValue()),
+                new STTDATA(new OFMatchX(INT_flag_hoplatency, PofCriterion.hexStringToBytes("0000000000000002"), PofCriterion.hexStringToBytes("00000000000000ff")), new OFMatchX(INT_flag_const1, PofCriterion.hexStringToBytes("0000000000000002"), PofCriterion.hexStringToBytes("00000000000000ff")), SPEventOp.OPRATOR_LESS,
+                        StateFirewallStatus.INT_STATUS_HIGH_QOS.getValue(), StateFirewallStatus.INT_STATUS_LOW_QOS.getValue())
 //							new STTDATA(tcp_flag_x, new OFMatchX(tcp_flag_const, PofCriterion.hexStringToBytes("0000000000000001"), PofCriterion.hexStringToBytes("000000000000000f"))1, SPEventOp.OPRATOR_BITAND,
 //				StateFirewallStatus.SFW_STATUS_REQUESTER_ESTABLISH.getValue(), StateFirewallStatus.SFW_STATUS_REQUESTER_FIN_SENT.getValue()),
 //                new STTDATA(tcp_flag_x, new OFMatchX(tcp_flag_const, PofCriterion.hexStringToBytes("0000000000000001"), PofCriterion.hexStringToBytes("000000000000000f")), SPEventOp.OPRATOR_BITAND,
@@ -624,8 +624,8 @@ public class AppComponent {
    //                     StateFirewallStatus.SFW_STATUS_RESPONSER_ESTABLISH.getValue(), StateFirewallStatus.SFW_STATUS_RESPONSER_ESTABLISH.getValue())
         };
 
-        log.info("++++++pjq tcp_flg_x to string {}", tcp_flag_x.toString());
-        log.info("++++++pjq tcp_flg_x to bytestring {}", tcp_flag_x.toBytesString());
+//        log.info("++++++pjq tcp_flg_x to string {}", tcp_flag_x.toString());
+//        log.info("++++++pjq tcp_flg_x to bytestring {}", tcp_flag_x.toBytesString());
 
         for (STTDATA sttdata : sttdat) {
             stt_tmp.addSttData(sttdata);
@@ -638,8 +638,8 @@ public class AppComponent {
 
         sfw.computeLength();
 
-        log.info("++++++pjq tcp_flg_x to string {}", tcp_flag_x.toString());
-        log.info("++++++pjq tcp_flg_x to bytestring {}", tcp_flag_x.toBytesString());
+//        log.info("++++++pjq tcp_flg_x to string {}", tcp_flag_x.toString());
+//        log.info("++++++pjq tcp_flg_x to bytestring {}", tcp_flag_x.toBytesString());
 
 
         log.info("++++++pjq sfw length {}", sfw.getLength());
@@ -660,7 +660,7 @@ public class AppComponent {
 
         log.info("send st mod msg to switch {}, msg type is {}", sw.getId(), OFType.SP_ST_MOD.getTypeValue());
 
-        STDATA stdat2 = new STDATA(StateFirewallStatus.TCP_STATUS_SERVER_LISTEN.getValue(),PofCriterion.hexStringToBytes("0a000001"));
+        STDATA stdat2 = new STDATA(StateFirewallStatus.INT_STATUS_LOW_QOS.getValue(),PofCriterion.hexStringToBytes("0a000001"));
 //        STDATA stdat3 = new STDATA(StateFirewallStatus.TCP_STATUS_SERVER_SYNRCVD.getValue(),PofCriterion.hexStringToBytes("0a000002"));
 //        STDATA stdat4 = new STDATA(StateFirewallStatus.TCP_STATUS_SERVER_ESTABLISH.getValue(),PofCriterion.hexStringToBytes("0a000003"));//lty
 
@@ -688,14 +688,14 @@ public class AppComponent {
         int notUsedPort = 0;
 
 //        ATDATA atdat1 = new ATDATA(StateFirewallStatus.SFW_STATUS_REQUESTER_NONE.getValue(),PofCriterion.hexStringToBytes("0a000001"),new SPAction(ActType.ACT_SETDSTFIELD,notUsedPort));
-        ATDATA atdat2 = new ATDATA(StateFirewallStatus.TCP_STATUS_SERVER_LISTEN.getValue(),PofCriterion.hexStringToBytes("02"),new SPAction(ActType.ACT_OUTPUT,notUsedPort));
+        ATDATA atdat2 = new ATDATA(StateFirewallStatus.INT_STATUS_LOW_QOS.getValue(),PofCriterion.hexStringToBytes("0a000001"),new SPAction(ActType.ACT_OUTPUT,notUsedPort));
 
-        ATDATA atdat3 = new ATDATA(StateFirewallStatus.TCP_STATUS_SERVER_LISTEN.getValue(),PofCriterion.hexStringToBytes("10"),new SPAction(ActType.ACT_SETDSTFIELD,notUsedPort));
-        ATDATA atdat4 = new ATDATA(StateFirewallStatus.TCP_STATUS_SERVER_SYNRCVD.getValue(),PofCriterion.hexStringToBytes("02"),new SPAction(ActType.ACT_SETDSTFIELD,notUsedPort));
-        ATDATA atdat5 = new ATDATA(StateFirewallStatus.TCP_STATUS_SERVER_SYNRCVD.getValue(),PofCriterion.hexStringToBytes("10"),new SPAction(ActType.ACT_OUTPUT,notUsedPort));
-
-        ATDATA atdat6 = new ATDATA(StateFirewallStatus.TCP_STATUS_SERVER_ESTABLISH.getValue(),PofCriterion.hexStringToBytes("02"),new SPAction(ActType.ACT_SETDSTFIELD,notUsedPort));
-        ATDATA atdat7 = new ATDATA(StateFirewallStatus.TCP_STATUS_SERVER_ESTABLISH.getValue(),PofCriterion.hexStringToBytes("10"),new SPAction(ActType.ACT_SETDSTFIELD,notUsedPort));
+        ATDATA atdat3 = new ATDATA(StateFirewallStatus.INT_STATUS_HIGH_QOS.getValue(),PofCriterion.hexStringToBytes("0a000001"),new SPAction(ActType.ACT_SETDSTFIELD,notUsedPort));
+//        ATDATA atdat4 = new ATDATA(StateFirewallStatus.TCP_STATUS_SERVER_SYNRCVD.getValue(),PofCriterion.hexStringToBytes("02"),new SPAction(ActType.ACT_SETDSTFIELD,notUsedPort));
+//        ATDATA atdat5 = new ATDATA(StateFirewallStatus.TCP_STATUS_SERVER_SYNRCVD.getValue(),PofCriterion.hexStringToBytes("10"),new SPAction(ActType.ACT_OUTPUT,notUsedPort));
+//
+//        ATDATA atdat6 = new ATDATA(StateFirewallStatus.TCP_STATUS_SERVER_ESTABLISH.getValue(),PofCriterion.hexStringToBytes("02"),new SPAction(ActType.ACT_SETDSTFIELD,notUsedPort));
+//        ATDATA atdat7 = new ATDATA(StateFirewallStatus.TCP_STATUS_SERVER_ESTABLISH.getValue(),PofCriterion.hexStringToBytes("10"),new SPAction(ActType.ACT_SETDSTFIELD,notUsedPort));
         //ATDATA atdat5 = new ATDATA(StateFirewallStatus.SFW_STATUS_REQUESTER_ESTABLISH.getValue(),PofCriterion.hexStringToBytes("0000000000000005"),new SPAction(ActType.ACT_OUTPUT,notUsedPort));
         //ATDATA atdat6 = new ATDATA(StateFirewallStatus.SFW_STATUS_REQUESTER_FIN_SENT.getValue(),PofCriterion.hexStringToBytes("0000000000000006"),new SPAction(ActType.ACT_OUTPUT,notUsedPort));
         //ATDATA atdat7 = new ATDATA(StateFirewallStatus.SFW_STATUS_DEFAULT_ERROR.getValue(),PofCriterion.hexStringToBytes("0000000000000007"),new SPAction(ActType.ACT_DROP,0));
@@ -704,10 +704,10 @@ public class AppComponent {
 //        atmodmsg.addATMod(SPAppId, SPModType.ENTRY_ADD, atdat1);
         atmodmsg.addATMod(SPAppId, SPModType.ENTRY_ADD, atdat2);
         atmodmsg.addATMod(SPAppId, SPModType.ENTRY_ADD, atdat3);
-        atmodmsg.addATMod(SPAppId, SPModType.ENTRY_ADD, atdat4);
-        atmodmsg.addATMod(SPAppId, SPModType.ENTRY_ADD, atdat5);
-        atmodmsg.addATMod(SPAppId, SPModType.ENTRY_ADD, atdat6);
-        atmodmsg.addATMod(SPAppId, SPModType.ENTRY_ADD, atdat7);
+//        atmodmsg.addATMod(SPAppId, SPModType.ENTRY_ADD, atdat4);
+//        atmodmsg.addATMod(SPAppId, SPModType.ENTRY_ADD, atdat5);
+//        atmodmsg.addATMod(SPAppId, SPModType.ENTRY_ADD, atdat6);
+//        atmodmsg.addATMod(SPAppId, SPModType.ENTRY_ADD, atdat7);
         //atmodmsg.addATMod(SPAppId, SPModType.ENTRY_ADD, atdat8);
 
         atmodmsg.computeLength();

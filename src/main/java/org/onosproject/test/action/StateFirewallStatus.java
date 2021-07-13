@@ -39,11 +39,11 @@ public enum StateFirewallStatus {
      */
 
     TCP_STATUS_DEFAULT_ERROR		(0),   //lty
-    SFW_STATUS_REQUESTER_NONE		(1),
+    INT_STATUS_LOW_QOS		(1), //lty
     TCP_STATUS_SERVER_LISTEN		(2),    //lty
 
     // first SYN from c--->s
-    SFW_STATUS_REQUESTER_SYN_SENT	(3),
+    INT_STATUS_HIGH_QOS	(3), //lty
     TCP_STATUS_SERVER_SYNRCVD	(4),  //lty
     // syn+ack from s ---->c
 
