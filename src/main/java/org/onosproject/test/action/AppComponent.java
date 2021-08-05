@@ -606,9 +606,9 @@ public class AppComponent {
         INT_flag_hoplatency.setFieldId((short)0xfff1); //lty
 
         STTDATA []sttdat = {
-                new STTDATA(new OFMatchX(INT_flag_hoplatency, PofCriterion.hexStringToBytes("0000000000000002"), PofCriterion.hexStringToBytes("00000000000000ff")), new OFMatchX(INT_flag_const1, PofCriterion.hexStringToBytes("0000000000000002"), PofCriterion.hexStringToBytes("00000000000000ff")), SPEventOp.OPRATOR_EQUALGREATER,
+                new STTDATA(new OFMatchX(INT_flag_hoplatency, PofCriterion.hexStringToBytes("0000000000000002"), PofCriterion.hexStringToBytes("00000000000000ff")), new OFMatchX(INT_flag_const1, PofCriterion.hexStringToBytes("0000000000000089"), PofCriterion.hexStringToBytes("00000000000000ff")), SPEventOp.OPRATOR_EQUALGREATER,
                         StateFirewallStatus.INT_STATUS_LOW_QOS.getValue(), StateFirewallStatus.INT_STATUS_HIGH_QOS.getValue()),
-                new STTDATA(new OFMatchX(INT_flag_hoplatency, PofCriterion.hexStringToBytes("0000000000000002"), PofCriterion.hexStringToBytes("00000000000000ff")), new OFMatchX(INT_flag_const1, PofCriterion.hexStringToBytes("0000000000000002"), PofCriterion.hexStringToBytes("00000000000000ff")), SPEventOp.OPRATOR_LESS,
+                new STTDATA(new OFMatchX(INT_flag_hoplatency, PofCriterion.hexStringToBytes("0000000000000002"), PofCriterion.hexStringToBytes("00000000000000ff")), new OFMatchX(INT_flag_const1, PofCriterion.hexStringToBytes("0000000000000089"), PofCriterion.hexStringToBytes("00000000000000ff")), SPEventOp.OPRATOR_LESS,
                         StateFirewallStatus.INT_STATUS_HIGH_QOS.getValue(), StateFirewallStatus.INT_STATUS_LOW_QOS.getValue())
 //							new STTDATA(tcp_flag_x, new OFMatchX(tcp_flag_const, PofCriterion.hexStringToBytes("0000000000000001"), PofCriterion.hexStringToBytes("000000000000000f"))1, SPEventOp.OPRATOR_BITAND,
 //				StateFirewallStatus.SFW_STATUS_REQUESTER_ESTABLISH.getValue(), StateFirewallStatus.SFW_STATUS_REQUESTER_FIN_SENT.getValue()),
@@ -688,9 +688,9 @@ public class AppComponent {
         int notUsedPort = 0;
 
 //        ATDATA atdat1 = new ATDATA(StateFirewallStatus.SFW_STATUS_REQUESTER_NONE.getValue(),PofCriterion.hexStringToBytes("0a000001"),new SPAction(ActType.ACT_SETDSTFIELD,notUsedPort));
-        ATDATA atdat2 = new ATDATA(StateFirewallStatus.INT_STATUS_LOW_QOS.getValue(),PofCriterion.hexStringToBytes("0a000001"),new SPAction(ActType.ACT_OUTPUT,notUsedPort));
+        ATDATA atdat2 = new ATDATA(StateFirewallStatus.INT_STATUS_LOW_QOS.getValue(),PofCriterion.hexStringToBytes("0a000001"),new SPAction(ActType.ACT_OUTPUT,3));
 
-        ATDATA atdat3 = new ATDATA(StateFirewallStatus.INT_STATUS_HIGH_QOS.getValue(),PofCriterion.hexStringToBytes("0a000001"),new SPAction(ActType.ACT_SETDSTFIELD,notUsedPort));
+        ATDATA atdat3 = new ATDATA(StateFirewallStatus.INT_STATUS_HIGH_QOS.getValue(),PofCriterion.hexStringToBytes("0a000001"),new SPAction(ActType.ACT_OUTPUT,1));
 //        ATDATA atdat4 = new ATDATA(StateFirewallStatus.TCP_STATUS_SERVER_SYNRCVD.getValue(),PofCriterion.hexStringToBytes("02"),new SPAction(ActType.ACT_SETDSTFIELD,notUsedPort));
 //        ATDATA atdat5 = new ATDATA(StateFirewallStatus.TCP_STATUS_SERVER_SYNRCVD.getValue(),PofCriterion.hexStringToBytes("10"),new SPAction(ActType.ACT_OUTPUT,notUsedPort));
 //
